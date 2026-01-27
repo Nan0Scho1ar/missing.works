@@ -1,10 +1,10 @@
-# n0s1.net
+# missing.works
 
 A minimal digital garden built with vanilla HTML, CSS, and JavaScript.
 
 ## Overview
 
-This is the source for [n0s1.net](https://n0s1.net), a personal blog/digital garden. Posts are organized by growth stage (seedling -> sprout -> growing -> tree) to reflect how ideas develop over time.
+This is the source for [missing.works](https://missing.works), a personal blog/digital garden. Posts are organized by growth stage (seedling -> sprout -> growing -> tree) to reflect how ideas develop over time.
 
 ## Structure
 
