@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../main.js" defer></script>
+</head>
+<body>
+  <post-content stage="sprout">
+    <p>
+        As someone who feels comfortable using basically all aspects of <code>git</code>,
+        I didn't really understand what <code>jj</code> offered the first time I played around with it. 
+        But after coming back to it and using it for a few months now, 
+        I absolutely agree with others who say <code>jj</code> is simpler. 
+        I also find it to be much more flexible in terms of workflow. 
+        Squashing, splitting, or just creating new changes as I go 
+        (and sometimes even describing these changes in advance).
+        I find myself switching between these workflows throughout the day without 
+        really thinking about it, because in Jujutsu they are all just the same thing: "changes".
+    </p>
+    <p>
+        When using <code>jj</code> I don't need to stage and commit my changes, I just need to describe 
+        them (though sometimes I will <code>jj split</code> which feels somewhat similar). 
+        I've never had weird stuff happen with untracked files when going back to an old commit. 
+        I don't need to worry about stashing uncommitted work to check or test something on another branch. 
+        I don't have to come up with a new branch name to avoid a detached head any time I want to jump 
+        back in time and try something else (<code>jj</code> doesn't even have the concept of a detached head). 
+        In fact, as far as <code>git</code> is concerned, my local has had a detached head for 3 months! 
+    </p>
+    <p>
+        Seriously... No stashing. No staging. No creating or switching branches. No checking out commits.
+        No soft resets. No hard resets. No frustration that <code>git</code> has locked me out of using half it's 
+        features because I'm half way through a failed merge. Just... changes... Want to move to a different point in history?
+        Just create a new change based on that commit. <code>jj</code> doesn't even <em>HAVE</em> a command for merging. 
+        A merge is just a change with multiple parents. But what about conflicts? 
+        Well yes of course merging will still have conflicts. But you aren't held hostage until you resolve them.
+        The merge commit can just stay conflicted until you are ready to deal with it. 
+        So you can move around the history and look at the two branches you are trying to merge for more context on
+        how to resolve the conflicts. Or you can pause it and quickly fix something else then come back and pick up where you left off.
+    </p>
+    <p>
+        I don't even really think that much about branches anymore. 
+        The only time branches are even relevant now is when I need to know the name of 
+        someone else's HEAD commit so I can merge their changes with mine, or when I'm giving one of
+        my commits a name to push or create a PR.
+    </p>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p>
+        Even if I don't stick with <code>jj</code> for whatever reason, 
+        the way I experience <code>git</code> has permanently shifted after using it. 
+        There were many things about how <code>git</code> operates under the hood which I intellectually understood before.
+        Some through playing around with the git internals, and others just through reading blogposts or documentation.
+        But when actually <em>using</em> <code>git</code>, it never really <em>felt</em> like it worked that way.
+    </p>
+    <p>
+        A branch no longer <em>feels</em> like a collection of commits. 
+        It's just a name which references a particular commit. 
+        By extension a merge no longer <em>feels</em> like merging the changes of one branch into another.
+        It's just a (often empty) commit with two or more parent commits. 
+        When you run <code>git merge</code> it also happens to move the head of the active
+        branch to that new merge commit (The branch name refers to the new commit).
+        But the ref being updated doesn't <em>feel</em> like part of the merge anymore.
+    </p>
+    <p>
+        I guess what I'm trying to describe is the difference between thinking or knowing something, and <em>feeling</em> it. 
+        Because of how fundamental branches are to the <code>git</code> workflow and the way you work with them,
+        it really felt like branches were quite distinct from one another. 
+        The history felt like a tree, with very linear branches which can be merged to make a fatter branch.
+        But now it actually feels like a graph. 
+        Like a singular history comprised of a bunch of commits, some of which have names.
+    </p>
+    <p>
+        I also feel like <code>jj</code> makes it so much easier to build upon and traverse that 
+        structure, because the tools it gives you are both simpler and more powerful.
+        The mental model is also much closer to how <code>git</code> works under the hood.
+        It's shown me that the model used by the <code>git</code> porcelain <em>IS</em> more complicated than the one used by the plumbing.
+        I might even go as far as to say that it feels like how <code>git</code> was <em>supposed</em> to work.
+    </p>
+    <p>
+        All this to say, <code>jj</code> does feel different to use and it did take a few days to get a 
+        feel for all the different workflows you can choose from. 
+        But I also think it only taking a few days of passive learning to reach a point 
+        of comfort which many git users never reach <em>is</em> evidence of it being simpler.
+        Not just simpler to use, but also simpler to learn. 
+        During that learning process I was so much more confident just trying things and seeing if it did what I expected, 
+        knowing that if I messed anything up fixing it is as simple as <code>jj undo</code>.
+    </p>
+  </post-content>
+</body>
+</html>
